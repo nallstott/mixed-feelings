@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -18,7 +18,7 @@ function Home() {
 	let location = useLocation();
 	const pages = ["radio", "shop", "music", "about", "news"];
 	let radioScrollTrigger, shopScrollTrigger, musicScrollTrigger, aboutScrollTrigger, newsScrollTrigger;
-	useEffect(() => {
+	useLayoutEffect(() => {
 		const backgroundSquare = document.querySelector(".home-menu-background");
 		pages.forEach((page) => {
 			switch (page) {

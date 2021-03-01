@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { gsap } from "gsap";
 
@@ -23,7 +23,7 @@ function RadioPlayerNav(props) {
 		paused: true,
 	});
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		if (isPlaying) {
 			audioEl.current.play();
 			radioPlayerGSAP.play();

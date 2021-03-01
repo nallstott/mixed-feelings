@@ -1,0 +1,15 @@
+==============================
+          TO DO LIST
+==============================
+
+01
+add radio player to home landing page
+
+02
+make nav dissapear on scroll down, reappear on scroll up using GSAP ScrollTrigger
+
+03
+convert nav to vw font sizing. WHy? Becuase why the fuck would we write 7 media queries when we can get away with 2 dipshit. 
+
+03
+build out preliminary mobile styles (or make alex build them)

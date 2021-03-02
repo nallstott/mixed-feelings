@@ -15,7 +15,6 @@ const backgroundImages = {
 };
 
 function Home() {
-	let location = useLocation();
 	const pages = ["radio", "shop", "music", "about", "news"];
 	let radioScrollTrigger, shopScrollTrigger, musicScrollTrigger, aboutScrollTrigger, newsScrollTrigger;
 	useLayoutEffect(() => {
@@ -159,6 +158,28 @@ function Home() {
 			newsScrollTrigger.kill();
 		};
 	}, []);
+
+	useLayoutEffect(() => {
+		const homeMenuItems = document.querySelectorAll(".home-menu-item");
+		let iterator = 0.5;
+		homeMenuItems.forEach((item) => {
+			gsap.from(item, {
+				y: 30,
+				opacity: 0,
+				duration: 1,
+				ease: "circ.out",
+				delay: iterator,
+			});
+			iterator = iterator + 0.2;
+		});
+		gsap.from(".home-menu-background", {
+			// y: 30,
+			opacity: 0,
+			duration: 2,
+			ease: "circ.out",
+			delay: 0.3,
+		});
+	}, [window.onload]);
 
 	const onPageLeave = () => {
 		window.scroll(0, 0);

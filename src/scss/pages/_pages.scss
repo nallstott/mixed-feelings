@@ -1,0 +1,29 @@
+// password page
+.password-page {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(1, 1, 1);
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 12;
+	.content {
+		width: 400px;
+		height: 400px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		img {
+			width: 300px;
+			margin: 0 auto;
+		}
+		input {
+			width: 100%;
+			background-color: rgba(1, 1, 1, 1);
+			border: 1px solid white;
+			padding: 5px;
+		}
+	}
+}

@@ -4,6 +4,7 @@ import { render } from "react-dom";
 import { BrowserRouter as Router, Switch, Route, useLocation } from "react-router-dom";
 
 import Nav from "./Components/nav/nav";
+import PasswordPage from "./Components/pages/password/password";
 
 const baseURL = "http://localhost:8080/";
 
@@ -65,6 +66,7 @@ function App() {
 
 render(
 	<Router>
+		<PasswordPage />
 		<App />
 	</Router>,
 	document.getElementById("root")
